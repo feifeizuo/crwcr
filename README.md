@@ -3,11 +3,11 @@ A Continuous Random Walker Model with Explicit Coherence Regularization for Imag
 
 ---
 
-This is a tiny software which implement the CRWCR algorithm (will be accepted by IEEE Transactions on Image Processing) use CUDA.
+This is a tiny software which implements the CRWCR algorithm (will be accepted by IEEE Transactions on Image Processing).
 
 ---
 ## Performance
-On my laptop ( with Intel i7-6700HQ CPU and GTX965M GPU),  I tested different sizes of images with 10 1D initializations  and 10  2D PR iterations. Cost time as shown in the table below.
+With 10 1D initializations and 10 2D PR iterations (enough for most applications), the running time on my laptop ( with Intel i7-6700HQ CPU and GTX965M GPU) are shown in the table below.
 
 | Image Size | 481X321 | 680X669 | 1024X1024 | 1443X963 | 1924X1284 |
 | ---------- | ------- | ------- | --------- | -------- | --------- |
@@ -17,14 +17,15 @@ On my laptop ( with Intel i7-6700HQ CPU and GTX965M GPU),  I tested different si
 
 ---
 
-## How to build
+## Building requirement
 
-+ The project can be compiled in Visual Studio (>= 2017.15.8).
-+ The project through CMake (>= 3.8).
++ The project can be compiled with Visual Studio (>= 2017.15.8).
++ The building through CMake requires a version number >= 3.8.
 + The primary GUI is based on Qt (Supported >= 5.10).
-+ The CRWCR algorithm GPU version based on CUDA (Supported >= 9.0). If your GPU is available, please check the USE_CUDA option.
-+ The image rendering based on OpenGL (>= 4.0).
++ GPU is supported, please check the USE_CUDA option if you have a GPU device. The GPU version is based on CUDA (Supported >= 9.0). 
++ The image rendering is based on OpenGL (>= 4.0).
 
 ## Other
 
-Code has been tested under Windows 10 with Visual Studio 2017. Maybe the program can work under Linux, it's welcome if anyone could test it.
+The code has been tested under Windows 10 with Visual Studio 2017. It might also work under Linux, but have not been tested. 
+Any feedback regarding compilation with Linux is appreciated. 
