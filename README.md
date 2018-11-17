@@ -1,9 +1,13 @@
 # CRWCR
-A Continuous Random Walker Model with Explicit Coherence Regularization for Image Segmentation 
+A Continuous Random Walker Model with Explicit Coherence Regularization for Image Segmentation (TIP 2018).
 
 ---
+![CRWCR](test%20image/crwcr.png)
+---
 
-This is a tiny software which implements the CRWCR algorithm (will be accepted by IEEE Transactions on Image Processing).
+This is a tiny software which implements our CRWCR algorithm. Please cite the following paper if you use our code.
+
+Mengfei Li, Hong Gao, Feifei zuo, Hongwei Li, "A Continuous Random Walker Model with Explicit Coherence Regularization for Image Segmentation", IEEE Transactions on Image Processing, 10.1109/TIP.2018.2881907.
 
 ---
 ## Performance
