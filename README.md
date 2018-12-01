@@ -1,13 +1,11 @@
 # CRWCR
-A Continuous Random Walker Model with Explicit Coherence Regularization for Image Segmentation (TIP 2018).
+[A Continuous Random Walker Model with Explicit Coherence Regularization for Image Segmentation](https://ieeexplore.ieee.org/abstract/document/8537912) (TIP 2018).
 
 ---
 ![CRWCR](test%20image/crwcr.png)
 ---
 
-This is a tiny software which implements our CRWCR algorithm. Please cite the following paper if you use our code.
-
-Mengfei Li, Hong Gao, Feifei zuo, Hongwei Li, "A Continuous Random Walker Model with Explicit Coherence Regularization for Image Segmentation", IEEE Transactions on Image Processing, 10.1109/TIP.2018.2881907.
+This is a tiny software which implements our CRWCR algorithm. 
 
 ---
 ## Performance
@@ -28,6 +26,20 @@ With 10 1D initializations and 10 2D PR iterations (enough for most applications
 + The primary GUI is based on Qt (Supported >= 5.10).
 + GPU is supported, please check the USE_CUDA option if you have a GPU device. The GPU version is based on CUDA (Supported >= 9.0). 
 + The image rendering is based on OpenGL (>= 4.0).
+
+## Citing CRWCR:
+
+If you use our code in your research, please cite with:
+```
+@article{li2018continuous,
+  title={A Continuous Random Walk Model with Explicit Coherence Regularization for Image Segmentation},
+  author={Li, Mengfei and Gao, Hong and Zuo, Feifei and Li, Hongwei},
+  journal={IEEE Transactions on Image Processing},
+  year={2018},
+  publisher={IEEE}
+}
+```
+
 
 ## Other
 
