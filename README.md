@@ -1,5 +1,5 @@
 # CRWCR
-[A Continuous Random Walker Model with Explicit Coherence Regularization for Image Segmentation](https://ieeexplore.ieee.org/abstract/document/8537912) (TIP 2018).
+[A Continuous Random Walker Model with Explicit Coherence Regularization for Image Segmentation](https://ieeexplore.ieee.org/abstract/document/8537912) (TIP 2019).
 
 ---
 ![CRWCR](test%20image/crwcr.png)
