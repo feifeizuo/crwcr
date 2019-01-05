@@ -31,11 +31,14 @@ With 10 1D initializations and 10 2D PR iterations (enough for most applications
 
 If you use our code in your research, please cite with:
 ```
-@article{li2018continuous,
-  title={A Continuous Random Walk Model with Explicit Coherence Regularization for Image Segmentation},
+@article{li2019continuous,
+  title={A Continuous Random Walk Model With Explicit Coherence Regularization for Image Segmentation},
   author={Li, Mengfei and Gao, Hong and Zuo, Feifei and Li, Hongwei},
   journal={IEEE Transactions on Image Processing},
-  year={2018},
+  volume={28},
+  number={4},
+  pages={1759--1772},
+  year={2019},
   publisher={IEEE}
 }
 ```
