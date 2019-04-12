@@ -32,10 +32,18 @@ void PointListGeometry::clear()
 
 void PointListGeometry::render()
 {
+#ifdef _MSC_VER
 	for each (auto segment in pointList_)
+#else
+	for (auto segment : pointList_)
+#endif
 	{
 		glBegin(GL_LINE_STRIP);
+#ifdef _MSC_VER
 		for each (auto p in segment)
+#else
+		for (auto p : segment)
+#endif
 		{
 			glVertex2f(p.x(), p.y());
 		}

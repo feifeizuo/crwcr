@@ -169,8 +169,11 @@ void ImageCanvas::paintGL()
 	}
 
 	glBegin(GL_LINE_STRIP);
-
+#ifdef _MSC_VER
 	for each (auto point in pointList_)
+#else
+	for (auto point : pointList_)
+#endif
 	{
 		glVertex2f(point.x(), point.y());
 	}
