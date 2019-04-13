@@ -21,7 +21,7 @@ With 10 1D initializations and 10 2D PR iterations (enough for most applications
 
 ## Building requirement
 
-+ The project can be compiled with Visual Studio (>= 2017.15.8).
++ The project can be compiled with Visual Studio (>= 2017.15.8) and gcc on Ubuntu 16.
 + The building through CMake requires a version number >= 3.8.
 + The primary GUI is based on Qt (Supported >= 5.10).
 + GPU is supported, please check the USE_CUDA option if you have a GPU device. The GPU version is based on CUDA (Supported >= 9.0). 
@@ -46,5 +46,4 @@ If you use our code in your research, please cite with:
 
 ## Other
 
-The code has been tested under Windows 10 with Visual Studio 2017. It might also work under Linux, but have not been tested. 
-Any feedback regarding compilation with Linux is appreciated. 
+The code has been tested under Windows 10 with Visual Studio 2017 and Ubuntu 16 with gcc. Any feedback is welcome. 
