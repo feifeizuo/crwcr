@@ -5,7 +5,9 @@ project(CRWCR)
 option(USE_CUDA "use cuda" OFF)
 
 if(USE_CUDA)
+    find_package(CUDA)
     enable_language("CUDA")
+    set(CUDA_NVCC_FLAGS "${CUDA_NVCC_FLAGS} -std=c++14")
 endif()
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -15,8 +17,8 @@ set(CMAKE_AUTOMOC ON)
 # Create code from a list of Qt designer ui files
 set(CMAKE_AUTOUIC ON)
 # Add a compiler flag
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -fPIC")
+set(CMAKE_CXX_STANDARD 14)
 
 # Make this a GUI application on Windows
 if(WIN32)
@@ -67,12 +69,17 @@ if(USE_CUDA)
         src/crwcrgpusolver.cu
     )
 	ADD_DEFINITIONS(-DUSE_GPU)
+    cuda_add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${HEADER_FILES} ${SOLVER_SOURCE_FILES} ${QRCS})
 else()
     set(SOLVER_SOURCE_FILES
         src/crwcrsolver.h
         src/crwcrsolver.cpp
     )
+    add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${HEADER_FILES} ${SOLVER_SOURCE_FILES} ${QRCS})
 endif()
 
-add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${HEADER_FILES} ${SOLVER_SOURCE_FILES} ${QRCS})
-target_link_libraries(${PROJECT_NAME} Qt5::Widgets opengl32.lib)
+if(WIN32)
+    target_link_libraries(${PROJECT_NAME} Qt5::Widgets opengl32.lib)
+else()
+    target_link_libraries(${PROJECT_NAME} Qt5::Widgets -lGL)
+endif()
