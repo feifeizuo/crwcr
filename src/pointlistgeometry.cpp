@@ -5,6 +5,11 @@ PointListGeometry::PointListGeometry()
 {
 }
 
+PointListGeometry::PointListGeometry(const PointListGeometry& p)
+{
+	pointList_ = p.pointList_;
+}
+
 
 PointListGeometry::~PointListGeometry()
 {

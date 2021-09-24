@@ -11,7 +11,18 @@ class PointListGeometry : public QOpenGLFunctions_3_3_Core
 {
 public:
 	PointListGeometry();
+
+	PointListGeometry(const PointListGeometry& p);
+
+	PointListGeometry& operator=(const PointListGeometry& p)
+	{
+		this->pointList_ = p.pointList_;
+		return *this;
+	}
+
 	~PointListGeometry();
+
+	
 
 	void addSegment(const PointSegment& seg);
 
